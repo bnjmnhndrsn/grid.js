@@ -1,0 +1,51 @@
+
+#container {
+	width: 450px;
+	height: 600px;
+	line-height: 150px;
+	font-size: 50px;
+	margin: 0 auto;
+}
+
+#box {
+	height: 150px;
+}
+
+#container table {
+
+	text-align: center;
+
+	border: none;
+	border-spacing: 0px;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+}
+
+#container td {
+	padding: 0px;
+	width: 150px;
+	height: 150px;
+}
+
+.black {
+	background-color: #30302B;
+	color: white;
+}
+
+.white {
+	background-color: white;
+	color: #30302B;
+}
+
+.selected {
+	background-color: red;
+}
+
+.val-exe::after {
+	content: "X";
+}
+
+.val-oh::after {
+	content: "O";
+}
