@@ -84,11 +84,11 @@ Box.prototype.set = function(text){
 }
 	
 $(document).ready(function(){
-	
+  var grid, game;
+   
+
 	var callback = function(i, j){
-	
-		newClass = (grid.getSquare(i, j) == "empty") ? "oh" : "empty";
-		grid.setSquare(i, j, newClass);	
+    game.makeTurn(i, j);
 	};
 	
 	var $table = $("#container table"),
@@ -98,4 +98,7 @@ $(document).ready(function(){
 	//keep global variable for now, so it can be accessed via console
 	grid = new Grid($table, size, initClass, callback);
 	box = new Box($("#box"));
+  
+  var game = new Game(grid);
+  game.run(function(){});
 });
